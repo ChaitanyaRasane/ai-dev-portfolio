@@ -32,7 +32,7 @@ const Contact = () => {
             </a>
           </Card>
           
-          <Card className="p-6 bg-gradient-card border-border hover:shadow-glow-subtle transition-all text-center">
+          {/* <Card className="p-6 bg-gradient-card border-border hover:shadow-glow-subtle transition-all text-center">
             <div className="mb-4 flex justify-center">
               <div className="p-3 bg-primary/10 rounded-lg">
                 <Phone className="w-6 h-6 text-primary" />
@@ -45,7 +45,7 @@ const Contact = () => {
             >
               +91-9403723058
             </a>
-          </Card>
+          </Card> */}
           
           <Card className="p-6 bg-gradient-card border-border hover:shadow-glow-subtle transition-all text-center">
             <div className="mb-4 flex justify-center">
