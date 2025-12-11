@@ -19,9 +19,16 @@ export default defineConfig(({ mode }) => ({
 */
 
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ai-dev-portfolio/'
+  // Use a relative base so the site works whether served from root or a subpath
+  base: './',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 })

@@ -71,3 +71,18 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Deployment
+
+- **Manual (quick):** install deps locally and run the built-in deploy script (publishes to `gh-pages` branch):
+
+```sh
+npm i
+npm run deploy
+```
+
+- **CI (recommended):** a GitHub Actions workflow is included at `.github/workflows/deploy.yml`. Pushing to `main` or `master` will build and publish the `dist` folder to GitHub Pages automatically.
+
+Notes:
+- Ensure the repository has a remote on GitHub and GitHub Pages is enabled for the repo (project site).
+- If your site will be served from a path like `https://username.github.io/repo-name/`, the workflow will work with the relative `base: './'` setting in `vite.config.ts`.
